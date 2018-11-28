@@ -7,9 +7,6 @@ install:
 services:
   - docker
 
-script:
-  - docker build --rm -f Dockerfile -t rashpile/spring-hello:latest .
-
 deploy:
   provider: script
   script: bash docker_push
