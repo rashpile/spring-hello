@@ -1,17 +1,17 @@
 language: java
 
 install:
-- docker --version
-- docker-compose --version
+  - docker --version
+  - docker-compose --version
 
 services:
-- docker
+  - docker
 
 script:
-- docker build --rm -f Dockerfile -t rashpile/spring-hello:latest .
+  - docker build --rm -f Dockerfile -t rashpile/spring-hello:latest .
 
 deploy:
   provider: script
-    script: bash docker_push
-    on:
-      branch: master
+  script: bash docker_push
+  on:
+    branch: master
