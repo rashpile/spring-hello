@@ -1,4 +1,6 @@
 #!/bin/bash
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+ls .
+ls ./target
 docker build -t rashpile/spring-hello .
 docker push rashpile/spring-hello
