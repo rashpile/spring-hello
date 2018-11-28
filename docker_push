@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-docker build --rm -f Dockerfile -t rashpile/spring-hello:latest .
+docker build -t rashpile/spring-hello .
 docker push rashpile/spring-hello
